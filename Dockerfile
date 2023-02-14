@@ -13,14 +13,14 @@ RUN apt-get update \
 # https://github.com/protocolbuffers/protobuf/tree/v3.6.1.3/src
 
 RUN cd /home && wget https://github.com/protocolbuffers/protobuf/archive/refs/tags/v3.6.1.3.tar.gz \
-  && tar xfz 3.6.1.3.tar.gz \
-  && rm 3.6.1.3.tar.gz \
-  && cd 3.6.1.3 \
+  && tar xfz v3.6.1.3.tar.gz \
+  && rm v3.6.1.3.tar.gz \
+  && cd v3.6.1.3 \
   && ./autogen.sh \
   && ./configure --prefix=/usr/ \
   && make \
   && make intall \
   && cd /home \
-  && rm -rf protobuf-3.6.1.3
+  && rm -rf v3.6.1.3
 
 CMD ["bash"]
