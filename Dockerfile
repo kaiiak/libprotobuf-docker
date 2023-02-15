@@ -19,7 +19,7 @@ RUN cd /home && wget -O protobuf-3.6.1.3.tar.gz https://github.com/protocolbuffe
   && ./autogen.sh \
   && ./configure --prefix=/usr/ \
   && make \
-  && make intall \
+  && make install \
   && cd /home \
   && rm -rf protobuf-3.6.1.3
 
